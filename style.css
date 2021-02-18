@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+:root {
+    font-size: calc(14px + 1vw);
+}
+
+body {
+    background-color: #d897d3;
+}
+
+/* BANNER */
+
+#banner {
+    position: relative;
+    margin: 0 auto;
+    width: 70%;
+    height: auto;
+}
+
+#lovevimto {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: auto;
+}
+
+#mediafake {
+    position: absolute;
+    left: 2%;
+    top: 5%;
+    width: 8%;
+}
