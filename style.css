@@ -7,7 +7,7 @@
 
 :root {
     font-family: 'Lemonada', cursive;
-    font-size: calc(10px + 1.2vw);
+    font-size: calc(10px + 1vw);
     --w: 70%;
 }
 
@@ -23,6 +23,7 @@ body {
     margin: 0 auto;
     width: var(--w);
     height: auto;
+    z-index: 1;
 }
 
 #lovevimto {
@@ -61,14 +62,13 @@ body {
     width: var(--w);
     background: rgb(217,255,55);
     background: linear-gradient(-45deg, rgba(217,255,55,1), rgba(143,238,18,1) 45%);
-    z-index: -1;
     padding: 4.5rem 0 1rem;
 }
 
 #title {
     margin-bottom: 0.2rem;
     font-family: EarlyMan;
-    font-size: 2rem;
+    font-size: 2.5rem;
     letter-spacing: 0.2rem;
     text-align: center;
     color: rgb(214, 8, 18);
@@ -109,6 +109,7 @@ body {
 .fgroup {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     position: relative;
     width: 90%;
     padding-top: 0.5rem;
@@ -120,8 +121,9 @@ label {
     display: inline-block;
     font-size: 1.1rem;
     font-weight: 400;
-    text-align: center;
-    margin-right: 0.5rem;
+    text-align: left;
+    margin: 0 0.5rem 0.5rem 0;
+    min-width: 30%;
 }
 
 .fcontrol {
@@ -132,4 +134,8 @@ label {
     box-shadow: 0 0 0.1rem 0.1rem white, 0 0 0.2rem 0.2rem black;
     font-size: 0.8rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
+}
+
+select:invalid {
+    color: grey;
 }
