@@ -7,7 +7,7 @@
 
 :root {
     font-family: 'Lemonada', cursive;
-    font-size: calc(10px + 1vw);
+    font-size: calc(12px + 0.8vw);
     --w: 70%;
 }
 
@@ -81,7 +81,7 @@ body {
     text-align: center;
 }
 
-/* MAIN -- FORM */
+/* MAIN -- FORM -- BG */
 
 #survey {
     position: relative;
@@ -106,6 +106,8 @@ body {
     background:linear-gradient(145deg, #4e1049,  #831079);
   }
 
+/* MAIN -- FORM -- FIELDS */
+
 .fgroup {
     display: flex;
     flex-direction: row;
@@ -119,7 +121,7 @@ body {
 
 label {
     display: inline-block;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 400;
     text-align: left;
     margin: 0 0.5rem 0.5rem 0;
@@ -127,15 +129,47 @@ label {
 }
 
 .fcontrol {
-    height: 1.2rem;
+    height: 1.1rem;
     width: 100%;
     border-radius: 0.4rem;
     border: 1px solid white;
     box-shadow: 0 0 0.1rem 0.1rem white, 0 0 0.2rem 0.2rem black;
     font-size: 0.8rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
+    font-weight: 500;
+    color: darkslategray;
 }
 
-select:invalid {
+select:invalid, ::placeholder {
+    font-weight: 400;
+    font-size: 0.7rem;
+    font-style: italic;
     color: grey;
 }
+
+#age {
+    margin: 0;
+    width: 48%;
+    margin-right: 2%;
+}
+
+#vimtoweek {
+    margin: 0;
+    width: 48%;
+    margin-left: 2%;
+}
+
+#gender {
+    margin-left: -0.5rem;
+    padding: 0.4rem 0 0.2rem 0.5rem;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#gender input[type="text"] {
+    width: 60%;
+    margin-left: 0.5rem;
+}
+

@@ -8,17 +8,15 @@
     <title>Vimto Lovers</title>
 </head>
 <body>
-    <header>
-        <div id="banner">
-            <svg id="wave" viewBox="0 0 24976.67 8537.21">
-                <g id="Layer_x0020_1">
-                 <metadata id="banner_svg_path"/>
-                 <path fill="#72246C" d="M-0 0l24976.67 0 0 6685.49c0,0 -4586.11,1851.72 -8756.07,1851.72 -4169.96,0 -6272.26,-2046.1 -9941.15,-2046.1 -3668.89,0 -6279.45,2046.1 -6279.45,2046.1l0 -8537.21z"/>
-                </g>
-            </svg>
-            <img id="lovevimto" src="images/vimto.png" alt="We Love Vimto!">
-            <img id="mediafake" src="images/mediafake.png" alt="">
-        </div>
+    <header id="banner">
+        <svg id="wave" viewBox="0 0 24976.67 8537.21">
+            <g id="Layer_x0020_1">
+                <metadata id="banner_svg_path"/>
+                <path fill="#72246C" d="M-0 0l24976.67 0 0 6685.49c0,0 -4586.11,1851.72 -8756.07,1851.72 -4169.96,0 -6272.26,-2046.1 -9941.15,-2046.1 -3668.89,0 -6279.45,2046.1 -6279.45,2046.1l0 -8537.21z"/>
+            </g>
+        </svg>
+        <img id="lovevimto" src="images/vimto.png" alt="We Love Vimto!">
+        <img id="mediafake" src="images/mediafake.png" alt="">
     </header>
     <main id="main">
 <!--         <div class="bubble x1"></div>
@@ -50,12 +48,7 @@
                     <input id="email" class="fcontrol" type="email" name="email" placeholder="Enter your e-mail" required>
                 </div>
                 <div class="fgroup">
-                    <label id="number-label" for="number">
-                        Vimtos per week
-                    </label>
-                    <input id="number" class="fcontrol" type="number" name="number" min="0" max="99" placeholder="Put how many Vimtos you drink per week" required>
-                </div>
-                <div class="fgroup">
+                <div id="age">
                     <label id="age-label" for="age-group">Age group</label>
                     <select id="dropdown" class="fcontrol" name="age-group" required>
                         <option disabled selected value="">Select your age group</option>
@@ -67,6 +60,22 @@
                         <option value="75-over">Age 75 and over</option>
                     </select>
                 </div>
+                <div id="vimtoweek">
+                    <label id="number-label" for="number">
+                        Vimtos per week
+                    </label>
+                    <input id="number" class="fcontrol" type="number" name="number" min="0" max="99" placeholder="Put how many Vimtos you drink per week" required>
+                </div> 
+                </div>
+                <div class="fgroup">
+                    <fieldset id="gender">
+                        <legend>Select a gender</legend>
+                        <label><input type="radio" name="gender" value="male">Male</label>
+                        <label><input type="radio" name="gender" value="female">Female</label>
+                        <label><input type="radio" name="gender" value="other">Other <input class="fcontrol" type="text" name="other_gender"></label>
+                    </fieldset>
+                </div>
+
             </form>
         </div>
     </main>
