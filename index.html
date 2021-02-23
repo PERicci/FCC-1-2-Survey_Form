@@ -48,7 +48,7 @@
                     <input id="email" class="fcontrol" type="email" name="email" placeholder="Enter your e-mail" required>
                 </div>
                 <div id="age" class="fgroup">
-                    <label id="age-label" for="age-group">Age group</label>
+                    <label id="age-label" for="dropdown">Age group</label>
                     <select id="dropdown" class="fcontrol" name="age-group" required>
                         <option disabled selected value="">Select your age group</option>
                         <option value="0-14">Age 0 to 14</option>
@@ -78,7 +78,7 @@
                 </div>
                 <div class="fgroup">
                     <fieldset id="vimtotypes">
-                        <legend>Favorite ways to enjoy Vimto</legend>
+                        <legend>Favou   rite ways to enjoy Vimto</legend>
                         <div id="types-options">
                             <label><input type="checkbox" name="vimtotypes" value="fizzy">Fizzy</label>
                             <label><input type="checkbox" name="vimtotypes" value="still">Still</label>
@@ -89,13 +89,20 @@
                     </fieldset>
                 </div>
                 <div class="fgroup">
-
+                    <label  id="text-label" for="lovetext">
+                        Why love Vimto?
+                    </label>
+                    <textarea id="lovetext" class="fcontrol" name="lovetext" placeholder="Listen to your heart and write why you love Vimto so much." ></textarea>
+                </div>
+                <div class="fgroup">
+                    <button id="submit" type="submit"><span id="submit-text">Submit</span>
+                    </button>
                 </div>
             </form>
         </div>
     </main>
-    <footer>
-
+    <footer id="identify">
+        	<p>This page was created by <a href="https://github.com/PERicci" rel="external" target="_blank">Pedro Eugenio Ricciardi</a></p>
     </footer>
 </body>
 </html>

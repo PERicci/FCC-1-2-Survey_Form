@@ -55,7 +55,7 @@ body {
 
 #main {
     position: relative;
-    margin: -5rem auto;
+    margin: -5rem auto 0;
     width: var(--w);
     background: rgb(217,255,55);
     background: linear-gradient(-45deg, rgba(217,255,55,1), rgba(143,238,18,1) 45%);
@@ -121,7 +121,7 @@ body {
     flex-wrap: wrap;
     position: relative;
     width: 90%;
-    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     margin: 0.5rem auto;
     color: white;
 }
@@ -140,18 +140,26 @@ label {
     width: 100%;
     border-radius: 0.4rem;
     border: 1px solid white;
-    box-shadow: 0 0 0.1rem 0.1rem white, 0 0 0.2rem 0.2rem black;
+    padding-left: 0.5rem;
+    padding-bottom: 0.2rem;
+    box-shadow: 0 0 0.1rem 0.1rem white, 0 0 0.1rem 0.1rem black;
     font-size: 0.8rem;
     font-family: 'RocknRoll One', sans-serif;
     font-weight: 500;
     color: darkslategray;
 }
 
+.fcontrol:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(143,238,18);
+  }
+
 select:invalid, ::placeholder {
-    font-weight: 400;
-    font-size: 0.7rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
-    height: 1.3rem;
+    font-size: 0.7rem;
+    height: 1.4rem;
     color: grey;
 }
 
@@ -185,6 +193,95 @@ select:invalid, ::placeholder {
 
 #know label, #vimtotypes label {
     text-align: center;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 0.3rem;
+    min-width: 0.6rem;
+    min-height: 0.6rem;
+}
+
+#lovetext {
+    min-height: 120px;
+}
+
+/* SUBMIT BUTTON */
+
+#submit {
+    --heart-size: 4rem;
+    box-sizing: border-box;
+    border: 0.2rem solid white;
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+    background-color: red;
+    display: inline-block;
+    height: var(--heart-size);
+    width: var(--heart-size);
+    margin: 0.5rem auto 0;
+    position: relative;
+    transform: rotate(-45deg);
+    z-index: 0;
+    transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
+}
+
+#submit::before, #submit::after {
+    content: "";
+    background-color: red;
+    height: var(--heart-size);
+    position: absolute;
+    width: var(--heart-size);
+    z-index: 0;
+    transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
+}
+
+#submit::before {
+    border-radius: 50% 50% 0 0;
+    border-top: 0.2rem solid white;
+    border-left: 0.2rem solid white;
+    top: calc(var(--heart-size)/-2 - 0.1rem);
+    left: -0.2rem;
+}
+
+#submit::after {
+    border-radius: 0% 50% 50% 0;
+    border-bottom: 0.2rem solid white;
+    border-right: 0.2rem solid white;
+    top: -0.4rem;
+    left: calc(var(--heart-size)/2 - 0.5rem);
+}
+
+#submit-text {
+    font-size: 1.2rem;
+    position: absolute;
+    z-index: 1;
+    transform: rotate(45deg) translateX(-50%);
+}
+
+#submit:hover, #submit:hover::before, #submit:hover::after {
+    --heart-size: 4.1rem;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    margin: -1rem auto 1rem;
+    width: var(--w);
+    position: relative;
+    background-color: black;
+    color: white;
+    font-size: 0.6rem;
+    text-align: center;
+    bottom: 0;
+}
+
+footer a{
+    color: rgba(143,238,18,1)
+}
+
+footer a:visited {
+
 }
 
 /* RESPONSIVENESS */
@@ -246,9 +343,14 @@ select:invalid, ::placeholder {
 
     #main {
         width: calc(100% + 20px);
-        margin: -5rem -10px
+        margin: -5rem -10px 0
     }
     
+    footer {
+        width: calc(100% + 20px);
+        margin: -1rem -10px 0
+    }
+
     #wave {
     position: relative;
     margin: -10px;
