@@ -19,19 +19,11 @@
         <img id="mediafake" src="images/mediafake.png" alt="">
     </header>
     <main id="main">
-<!--         <div class="bubble x1"></div>
-        <div class="bubble x2"></div>
-        <div class="bubble x3"></div>
-        <div class="bubble x4"></div>
-        <div class="bubble x5"></div>
-        <div class="bubble x6"></div>
-        <div class="bubble x7"></div>
-        <div class="bubble x8"></div> -->
         <h1 id="title">
             Survey for Vimto Lovers
         </h1>
         <p id="description">
-            Say us why you love Vimto so much and what your preferences
+            Say us why you love Vimto so much and what your preferences are
         </p>
         <div id="survey">
             <form id="survey-form" action="">
@@ -69,7 +61,7 @@
                     <fieldset id="know">
                         <legend>When did you know Vimto?</legend>
                         <div id="know-options">
-                            <label><input type="radio" name="know" value="childhood">Childhood</label>
+                            <label><input type="radio" name="know" value="childhood" required>Childhood</label>
                             <label><input type="radio" name="know" value="youth">Youth</label>
                             <label><input type="radio" name="know" value="adulthood">Adulthood</label>
                             <label><input type="radio" name="know" value="forgot">Forgot it</label>
@@ -92,7 +84,7 @@
                     <label  id="text-label" for="lovetext">
                         Why love Vimto?
                     </label>
-                    <textarea id="lovetext" class="fcontrol" name="lovetext" placeholder="Listen to your heart and write why you love Vimto so much." ></textarea>
+                    <textarea id="lovetext" class="fcontrol" name="lovetext" placeholder="Listen to your heart and write why you love Vimto so much." required></textarea>
                 </div>
                 <div class="fgroup">
                     <button id="submit" type="submit"><span id="submit-text">Submit</span>
