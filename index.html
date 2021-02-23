@@ -47,8 +47,7 @@
                     </label>
                     <input id="email" class="fcontrol" type="email" name="email" placeholder="Enter your e-mail" required>
                 </div>
-                <div class="fgroup">
-                <div id="age">
+                <div id="age" class="fgroup">
                     <label id="age-label" for="age-group">Age group</label>
                     <select id="dropdown" class="fcontrol" name="age-group" required>
                         <option disabled selected value="">Select your age group</option>
@@ -60,22 +59,38 @@
                         <option value="75-over">Age 75 and over</option>
                     </select>
                 </div>
-                <div id="vimtoweek">
+                <div id="vimtoweek" class="fgroup">
                     <label id="number-label" for="number">
-                        Vimtos per week
+                        Vimto per week
                     </label>
-                    <input id="number" class="fcontrol" type="number" name="number" min="0" max="99" placeholder="Put how many Vimtos you drink per week" required>
+                    <input id="number" class="fcontrol" type="number" name="number" min="0" max="99" placeholder="Put how many pints you drink per week" required>
                 </div> 
-                </div>
                 <div class="fgroup">
-                    <fieldset id="gender">
-                        <legend>Select a gender</legend>
-                        <label><input type="radio" name="gender" value="male">Male</label>
-                        <label><input type="radio" name="gender" value="female">Female</label>
-                        <label><input type="radio" name="gender" value="other">Other <input class="fcontrol" type="text" name="other_gender"></label>
+                    <fieldset id="know">
+                        <legend>When did you know Vimto?</legend>
+                        <div id="know-options">
+                            <label><input type="radio" name="know" value="childhood">Childhood</label>
+                            <label><input type="radio" name="know" value="youth">Youth</label>
+                            <label><input type="radio" name="know" value="adulthood">Adulthood</label>
+                            <label><input type="radio" name="know" value="forgot">Forgot it</label>
+                        </div>
                     </fieldset>
                 </div>
+                <div class="fgroup">
+                    <fieldset id="vimtotypes">
+                        <legend>Favorite ways to enjoy Vimto</legend>
+                        <div id="types-options">
+                            <label><input type="checkbox" name="vimtotypes" value="fizzy">Fizzy</label>
+                            <label><input type="checkbox" name="vimtotypes" value="still">Still</label>
+                            <label><input type="checkbox" name="vimtotypes" value="squash">Squash</label>
+                            <label><input type="checkbox" name="vimtotypes" value="kids">For Kids</label>
+                            <label><input type="checkbox" name="vimtotypes" value="other">Other</label>
+                        </div>    
+                    </fieldset>
+                </div>
+                <div class="fgroup">
 
+                </div>
             </form>
         </div>
     </main>

@@ -1,14 +1,11 @@
 @charset "UTF-8";
-@font-face {
-    font-family: EarlyMan;
-    src: url(fonts/EarlyMan-q9r0.ttf);
-  }
-@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gurajada&family=Lemonada:wght@400;500;600&family=RocknRoll+One&display=swap');
 
 :root {
     font-family: 'Lemonada', cursive;
     font-size: calc(12px + 0.8vw);
     --w: 70%;
+    --increment: 15%;
 }
 
 body {
@@ -62,14 +59,15 @@ body {
     width: var(--w);
     background: rgb(217,255,55);
     background: linear-gradient(-45deg, rgba(217,255,55,1), rgba(143,238,18,1) 45%);
-    padding: 4.5rem 0 1rem;
+    padding: 2rem 0 1rem;
 }
 
 #title {
     margin-bottom: 0.2rem;
-    font-family: EarlyMan;
-    font-size: 2.5rem;
-    letter-spacing: 0.2rem;
+    font-family: 'Gurajada', serif;
+    font-size: 5rem;
+    letter-spacing: 0.15rem;
+    line-height: 3.5rem;
     text-align: center;
     color: rgb(214, 8, 18);
     text-shadow: 0 0 0.4rem white, 0 0 0.6rem white, 0 0 1rem white;
@@ -77,6 +75,8 @@ body {
 
 #description {
     margin: 0 auto;
+    font-family: 'RocknRoll One', sans-serif;
+    font-size: 1.1rem;
     font-weight: 500;
     text-align: center;
 }
@@ -85,7 +85,7 @@ body {
 
 #survey {
     position: relative;
-    width: 85%;
+    width: calc(var(--w) + var(--increment));
     background-image: linear-gradient(145deg, #831079,  #4e1049);
     margin: 1rem auto;
     border-radius: 0.5rem;
@@ -108,6 +108,13 @@ body {
 
 /* MAIN -- FORM -- FIELDS */
 
+#survey-form {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .fgroup {
     display: flex;
     flex-direction: row;
@@ -129,13 +136,13 @@ label {
 }
 
 .fcontrol {
-    height: 1.1rem;
+    height: 1.2rem;
     width: 100%;
     border-radius: 0.4rem;
     border: 1px solid white;
     box-shadow: 0 0 0.1rem 0.1rem white, 0 0 0.2rem 0.2rem black;
     font-size: 0.8rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
+    font-family: 'RocknRoll One', sans-serif;
     font-weight: 500;
     color: darkslategray;
 }
@@ -144,32 +151,126 @@ select:invalid, ::placeholder {
     font-weight: 400;
     font-size: 0.7rem;
     font-style: italic;
+    height: 1.3rem;
     color: grey;
 }
 
 #age {
-    margin: 0;
-    width: 48%;
+    width: 43%;
     margin-right: 2%;
 }
 
 #vimtoweek {
-    margin: 0;
-    width: 48%;
+    width: 43%;
     margin-left: 2%;
 }
 
-#gender {
-    margin-left: -0.5rem;
-    padding: 0.4rem 0 0.2rem 0.5rem;
-    width: 48%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+#know, #vimtotypes {
+    width: 96%;
 }
 
-#gender input[type="text"] {
-    width: 60%;
-    margin-left: 0.5rem;
+#know-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 0.7rem;
+    font-family: 'RocknRoll One', sans-serif;
 }
 
+#types-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    font-size: 0.7rem;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+#know label, #vimtotypes label {
+    text-align: center;
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 1400px) {
+    :root {
+        --w: 80%;
+        --increment: 8%;
+    }
+}
+
+@media (max-width: 1150px) {
+    :root {
+        --w: 90%;
+        --increment: 3%;
+    }
+}
+
+@media (max-width: 1000px) {
+    :root {
+        --w: 100%;
+        --increment: -4%;
+    }
+}
+
+@media (max-width: 900px) {
+    #types-options {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+
+    #know-options {
+    grid-template-columns: 1fr 1fr;
+    }
+
+    #age, #vimtoweek {
+        width: 90%;
+        margin: 0.5rem auto;
+    }
+
+    #title {
+        font-size: 12vw;
+    }
+    
+    #description {
+        font-size: 2.7vw;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    #types-options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #main {
+        width: calc(100% + 20px);
+        margin: -5rem -10px
+    }
+    
+    #wave {
+    position: relative;
+    margin: -10px;
+    }
+
+    #lovevimto {
+        top: 2%;
+    }
+    
+    #mediafake {
+        left: 1%;
+        top: 2.5%;
+        width: 10%;
+    }
+
+@media (max-width: 400px) {
+    #types-options {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #know-options {
+        grid-template-columns: 1fr;
+        }
+}
