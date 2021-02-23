@@ -147,8 +147,11 @@ select:invalid, ::placeholder {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
     font-size: 0.7rem;
-    height: 1.4rem;
     color: grey;
+}
+
+#dropdown {
+    height: 1.45rem;
 }
 
 #age {
